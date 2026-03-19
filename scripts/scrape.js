@@ -6,6 +6,10 @@
 import { scrapeInvestor } from "../lib/scrapeInvestor.js";
 import { scrapeOresund } from "../lib/scrapeOresund.js";
 import { scrapeCreades } from "../lib/scrapeCreades.js";
+import { scrapeIndustriVarden } from "../lib/scrapeIndustriVarden.js";
+import { scrapeLatour } from "../lib/scrapeLatour.js";
+import { scrapeLundbergs } from "../lib/scrapeLundbergs.js";
+import { scrapeSvolder } from "../lib/scrapeSvolder.js";
 import { resolveAllTickers } from "../lib/resolveTickers.js";
 import { supabase } from "../lib/supabase.js";
 
@@ -22,6 +26,10 @@ const scrapers = [
   { fn: scrapeInvestor, name: "Investor" },
   { fn: scrapeOresund, name: "Öresund" },
   { fn: scrapeCreades, name: "Creades" },
+  { fn: scrapeIndustriVarden, name: "Industrivärden" },
+  { fn: scrapeLatour, name: "Latour" },
+  { fn: scrapeLundbergs, name: "Lundbergs" },
+  { fn: scrapeSvolder, name: "Svolder" },
 ];
 
 for (const { fn, name } of scrapers) {

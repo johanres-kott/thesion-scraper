@@ -4,10 +4,14 @@
 import { scrapeInvestor } from "../lib/scrapeInvestor.js";
 import { scrapeOresund } from "../lib/scrapeOresund.js";
 import { scrapeCreades } from "../lib/scrapeCreades.js";
+import { scrapeIndustriVarden } from "../lib/scrapeIndustriVarden.js";
+import { scrapeLatour } from "../lib/scrapeLatour.js";
+import { scrapeLundbergs } from "../lib/scrapeLundbergs.js";
+import { scrapeSvolder } from "../lib/scrapeSvolder.js";
 import { resolveAllTickers } from "../lib/resolveTickers.js";
 import { supabase } from "../lib/supabase.js";
 
-const scrapers = [scrapeInvestor, scrapeOresund, scrapeCreades];
+const scrapers = [scrapeInvestor, scrapeOresund, scrapeCreades, scrapeIndustriVarden, scrapeLatour, scrapeLundbergs, scrapeSvolder];
 
 export default async function handler(req, res) {
   // Verify cron secret or allow manual trigger
