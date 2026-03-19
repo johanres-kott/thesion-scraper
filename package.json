@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "scrape": "node scripts/scrape.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.99.0",
