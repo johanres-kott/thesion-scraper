@@ -11,6 +11,10 @@ export default async function handler(req, res) {
 
   if (req.method === "OPTIONS") return res.status(200).end();
 
+  if (!supabase) {
+    return res.status(500).json({ error: "Missing SUPABASE_URL or SUPABASE_SERVICE_KEY env vars" });
+  }
+
   const { company } = req.query;
 
   let query = supabase
