@@ -9,6 +9,10 @@
       "schedule": "0 7 * * *"
     },
     {
+      "path": "/api/generate-notifications",
+      "schedule": "30 17 * * 1-5"
+    },
+    {
       "path": "/api/snapshot",
       "schedule": "0 18 * * 1-5"
     },
